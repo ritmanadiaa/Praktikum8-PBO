@@ -20,7 +20,7 @@ public class Kucing extends Hewan{
 }
 ```
 - ini merupakan sublass yang mewarisi kelas **`Hewan`** menggunakan kata kunci **`extends`**
-- Notasi **`@Override`** digunakan untuk menulis ulang metode **`bersuara`** agar menghasilkan perilaku yg spesifik kucing yaitu **`"Kucing: Meow meow!"`**
+- Notasi **`@Override`** digunakan untuk menulis ulang metode **`bersuara`** agar             menghasilkan perilaku yg spesifik kucing yaitu **`"Kucing: Meow meow!"`**
   3. **`Anjing.java`**
 ```java
 public class Anjing extends Hewan{
@@ -31,7 +31,7 @@ public class Anjing extends Hewan{
 }
 ```
 - Merupakan subclass lain yg juga mewarisi class **`Hewan`**
-- **`@Override`** metode **`bersuara()`** untuk mencetak suara spesifik anjing yaitu **`"Anjing: Guk guk`**
+- **`@Override`** metode **`bersuara()`** untuk mencetak suara spesifik anjing yaitu **`"Anjing: Guk guk`**  
   4. **`PoliTester.java`**
   ```java
   public class PoliTester {
@@ -48,3 +48,7 @@ public class Anjing extends Hewan{
         }
     }
   ```
+  - Class ini digunakan untuk menunjukan penerapan konsep Dynamic Binding atau polimorfisme    yang terjadi saat program dijalankan (Runtime)
+  - Membuat array dengan tipe superclass **`(Hewan[] daftarHewan)`**, kemudian diisi dengan    objek dari kelas infuk maupun kelas turunannya, seperti **`Hewan`**, **`Kucing`**, dan      **`Anjing`** melalui proses upcasting
+  - Menggunakan perulangan **`for`** untuk menjalankan metode **`bersuara()`** pada setiap     objek dengan cara yang sama, tetapi menghasilkan suara yg berbeda sesuai dengan jenis       objek yang dipanggil.
+  B. 
