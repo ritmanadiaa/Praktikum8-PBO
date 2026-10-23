@@ -29,9 +29,8 @@ public class Kucing extends Hewan{
         System.out.println("Anjing: Guk guk!");
     }
   }
-```  
-- Merupakan subclass lain yg juga mewarisi class **`Hewan`**
-- **`@Override`** metode **`bersuara()`** untuk mencetak suara spesifik anjing yaitu **`"Anjing: Guk guk`**
+```
++ Merupakan subclass lain yg juga mewarisi class **`Hewan`** dan **`@Override`** metode **`bersuara()`** untuk mencetak suara spesifik anjing yaitu **`"Anjing: Guk guk`**
 
   4. **`PoliTester.java`**  
   ```java
