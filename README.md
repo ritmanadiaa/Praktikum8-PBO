@@ -151,8 +151,28 @@ public class Smartphone implements AlatElektronik, Kamera {
     }
 }
 ```
-- 
-5. **`TesSmartphone.java`**
+- **`public class Smartphone implements AlatElektronik, Kamera`** : menunjukan bahwa kelas **`Smartphone,java`** wajib memenuhi semua aturan yg ada pada interface **`AlatElektronik`** maupun **`Kamera``**
+- Memiliki atribut **`private String merk`** untuk menyimpan informasi merek dari smartphone
+- Konstruktor **`public Smartphone(String merk)`** digunakan untuk menginisialisasi nilai atribut **`merk`** saat objek baru dibuat.
+- Menggunakan anotasi **`@Override`** pada metode **`nyalakan()`** untuk mengisi metode bawaan dari interface **`AlatElektronik`** kemudian mencetak teks yang menyatakan perangkat menyala dan melakukan booting sistem
+- Meng-override metode **`matikan()`** dari interface **`AlatElektronik`** dan mencetak teks konfirmasi bahwa perangkat dimatikan
+- Meng-override metode **`ambilFoto()`** dari interface Kamera kemudian mencetak teks simulasi pengambilan foto dan penyimpanan ke dalam galeri perangkat berdasarkan mereknya.  
+5. **`TesSmartphone.java`**  
+```java
+public class TesSmartphone {
+    public static void main(String[] args) {
+        Smartphone hp = new Smartphone("Samsung");
 
-
-
+        hp.nyalakan();
+        hp.ambilFoto();
+        hp.matikan();
+    }
+}
+```  
+- **`public class TesSmartphone`**: untuk mendefinisikan kelas utama (main class) yang berfungsi untuk menjalankan program pengujian (testing) terhadap kelas **`Smartphone`**
+- **`public static void main(String[] args)`**: merupakan metode utama (main method) tempat eksekusi program Java dimulai ketika dijalankan.
+- **`Smartphone hp = new Smartphone("Samsung");`**: Membuat objek baru dari class **`Smartphone`** dengan nama variabel **`hp`**. Pada saat instansiasi, argumen **`"Samsung"`** dikirimkan ke konstruktor untuk mengisi atribut **`merk`** pada objek tersebut
+- **`hp.nyalakan();`**: untuk memanggil metode **`nyalakan()`** yang telah di-override di dalam kelas Smartphone (berasal dari kontrak interface **`AlatElektronik`**). Kode ini akan mencetak pesan ke layar bahwa perangkat dengan merek Samsung menyala dan melakukan booting OS.
+- **`hp.ambilFoto();`**: untuk memanggil metode **`ambilFoto()`** yang di-override dari interface **`Kamera`**. Metode ini mencetak teks simulasi bahwa foto berhasil diambil dan disimpan ke galeri perangkat.
+- **`hp.matikan();`**: Memanggil metode **`matikan()`** dari interface **`AlatElektronik`** untuk mencetak pesan konfirmasi bahwa perangkat dimatikan.
+  
