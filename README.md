@@ -20,7 +20,7 @@ public class Kucing extends Hewan{
  }
 ```
 - ini merupakan sublass yang mewarisi kelas **`Hewan`** menggunakan kata kunci **`extends`**
-- Notasi **`@Override`** digunakan untuk menulis ulang metode **`bersuara`** agar             menghasilkan perilaku yg spesifik kucing yaitu **`"Kucing: Meow meow!"`**    
+- Notasi **`@Override`** digunakan untuk menulis ulang metode **`bersuara`** agar             menghasilkan perilaku yg spesifik kucing yaitu **`"Kucing: Meow meow!"`**
 3. **`Anjing.java`**
   ```java
   public class Anjing extends Hewan{
