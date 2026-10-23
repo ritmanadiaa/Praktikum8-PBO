@@ -119,14 +119,14 @@ public interface AlatElektronik {
 ```
 - **`public interface AlatElektronik`** : untuk mendefinisikan kontrak untuk perangkat elektronik
 - terdapat dua tanda tangan metode *(method signatures)* tanpa bodi yaitu **`nyalakan()`** dan **`matikan()`**  
-3. **`Kamera.java`**
+2. **`Kamera.java`**
 ```java
 public interface Kamera {
     void ambilFoto();
 }
 ```
 - **`public interface Kamera`** : untuk mendefinisikan kontrak khusus untuk perangkat yang memiliki kemampuan fotografi dan berisi satu metode yaitu **`ambilFoto()`**  
-4. **`Smartphone,java`**
+3. **`Smartphone,java`**
 ```java
 public class Smartphone implements AlatElektronik, Kamera {
     private String merk;
@@ -157,7 +157,7 @@ public class Smartphone implements AlatElektronik, Kamera {
 - Menggunakan anotasi **`@Override`** pada metode **`nyalakan()`** untuk mengisi metode bawaan dari interface **`AlatElektronik`** kemudian mencetak teks yang menyatakan perangkat menyala dan melakukan booting sistem
 - Meng-override metode **`matikan()`** dari interface **`AlatElektronik`** dan mencetak teks konfirmasi bahwa perangkat dimatikan
 - Meng-override metode **`ambilFoto()`** dari interface Kamera kemudian mencetak teks simulasi pengambilan foto dan penyimpanan ke dalam galeri perangkat berdasarkan mereknya.  
-5. **`TesSmartphone.java`**  
+4. **`TesSmartphone.java`**  
 ```java
 public class TesSmartphone {
     public static void main(String[] args) {
